@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Biceps Gym – Strength & Fitness Centre in Ayodhya</title>
+<meta name="description" content="Strength training, bodybuilding, personal training and supplements in Gudri Bazar, Ayodhya. 4.8★ rated gym.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--concrete:#e4e4df;--ink:#16181a;--plate:#f5c400;--steel:#5b6168;--paper:#f3f3ef}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:Barlow,system-ui,Arial,sans-serif;background:var(--concrete);color:var(--ink);line-height:1.6;font-size:17px}
+h1,h2,h3{font-family:"Big Shoulders Display",Impact,"Arial Narrow",sans-serif;line-height:.95;text-transform:uppercase;letter-spacing:.01em}
+a{color:inherit}button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--plate);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+header{position:sticky;top:0;z-index:10;background:var(--ink);color:var(--paper)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:24px;text-decoration:none;text-transform:uppercase}
+.logo span{color:var(--plate)}
+nav{display:flex;gap:24px;align-items:center}
+nav a{text-decoration:none;font-weight:500;font-size:15px}
+nav a:hover{color:var(--plate)}
+.btn{display:inline-block;background:var(--plate);color:var(--ink);font-weight:600;padding:13px 24px;border-radius:4px;text-decoration:none;border:2px solid var(--ink);transition:transform .15s;text-align:center}
+.btn:hover{transform:translateY(-2px)}
+.btn.dark{background:var(--ink);color:var(--paper)}
+.btn.out{background:transparent;color:inherit;border-color:currentColor}
+header .btn{padding:8px 16px;font-size:15px;border-color:var(--plate)}
+.hero{padding:70px 0 40px}
+.hero h1{font-size:clamp(58px,13vw,168px);font-weight:900}
+.hero h1 em{font-style:normal;display:block;-webkit-text-stroke:2px var(--ink);color:transparent}
+.hero p{max-width:520px;margin:26px 0 30px;font-size:19px;color:#2b2f33}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.rating{display:inline-flex;align-items:baseline;gap:10px;background:var(--ink);color:var(--paper);padding:10px 18px;border-radius:4px;margin-bottom:22px}
+.rating b{font-family:"Big Shoulders Display",Impact,sans-serif;font-size:34px;color:var(--plate)}
+.bar{margin-top:56px;height:34px;position:relative;display:flex;align-items:center}
+.bar .rod{position:absolute;left:0;right:0;height:10px;background:linear-gradient(var(--steel),#9aa0a6 45%,var(--steel));border-radius:5px}
+.bar .stack{position:absolute;top:50%;transform:translateY(-50%);display:flex;align-items:center;gap:3px}
+.bar .l{left:6%}.bar .r{right:6%;flex-direction:row-reverse}
+.bar i{display:block;background:var(--ink);border-radius:3px}
+.bar i:nth-child(1){width:14px;height:96px}.bar i:nth-child(2){width:12px;height:76px;background:var(--plate)}.bar i:nth-child(3){width:10px;height:58px}
+h2{font-size:clamp(40px,7vw,76px);font-weight:900;margin-bottom:14px}
+.lead{max-width:560px;color:var(--steel);margin-bottom:40px}
+.band{background:var(--ink);color:var(--paper)}
+.band .lead{color:#b8bcc1}
+.progs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:2px;background:var(--steel);border:2px solid var(--steel)}
+.prog{background:var(--paper);padding:28px 24px 30px}
+.prog h3{font-size:32px;margin-bottom:10px;font-weight:900}
+.prog p{color:#3d4247;font-size:16px}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:10px}
+.tile{position:relative;border:0;padding:0;border-radius:4px;overflow:hidden;background:var(--steel);color:var(--paper);text-align:left}
+.tile.big{grid-column:span 2;grid-row:span 2}
+.tile.wide{grid-column:span 2}
+.tile img,.tile video{width:100%;height:100%;object-fit:cover;display:block}
+.tile.ph{background:repeating-linear-gradient(135deg,#2b2f33 0 14px,#34393e 14px 28px)}
+.tile .cap{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;font-size:14px;font-weight:500;background:linear-gradient(transparent,rgba(0,0,0,.75))}
+.tile.ph .cap{position:static;background:none;padding:12px}
+.tile .play{position:absolute;top:10px;right:10px;background:var(--plate);color:var(--ink);font-weight:600;font-size:13px;padding:3px 10px;border-radius:99px}
+.tile:hover img,.tile:hover video{filter:brightness(1.08)}
+/* reels carousel */
+.reels{margin-top:52px}
+.reels-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}
+.reels h3{font-size:clamp(30px,5vw,46px);font-weight:900;color:var(--plate)}
+.cbtns{display:flex;gap:8px}
+.cbtn{width:44px;height:44px;border-radius:50%;border:2px solid var(--plate);background:transparent;color:var(--plate);font-size:24px;line-height:1}
+.cbtn:hover{background:var(--plate);color:var(--ink)}
+.track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin;scrollbar-color:var(--plate) #2b2f33}
+.rcard{flex:0 0 auto;width:min(230px,68vw);scroll-snap-align:start}
+.reel{aspect-ratio:9/16;border-radius:8px;overflow:hidden;background:repeating-linear-gradient(135deg,#2b2f33 0 14px,#34393e 14px 28px);display:flex;align-items:center;justify-content:center;text-align:center;padding:14px;color:#b8bcc1;font-size:14px}
+.reel.has{padding:0;background:#000}
+.reel video{width:100%;height:100%;object-fit:cover;display:block}
+.rcard h4{font-size:16px;font-weight:600;margin:10px 0 2px}
+.rcard p{font-size:14px;color:#b8bcc1}
+.rcard a{font-size:14px;color:var(--plate)}
+/* accordion */
+.acc{border-top:2px solid rgba(128,128,128,.45)}.acc:last-child{border-bottom:2px solid rgba(128,128,128,.45)}
+.acc-h{width:100%;display:flex;justify-content:space-between;align-items:center;gap:14px;background:none;border:0;color:inherit;padding:20px 4px;text-align:left;font-size:19px;font-weight:600}
+.acc-h:hover span:first-child{text-decoration:underline;text-underline-offset:4px}
+.acc-h .ico{flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:var(--plate);color:var(--ink);display:grid;place-items:center;font-size:22px;line-height:1;transition:transform .2s}
+.acc.open .ico{transform:rotate(45deg)}
+.acc-p{display:none;padding:0 4px 22px;max-width:640px}
+.acc.open .acc-p{display:block}
+.faq{max-width:780px}
+/* map */
+.mapbox{min-height:360px;border-radius:4px;overflow:hidden;border:2px solid var(--paper);background:#2b2f33}
+.mapbox iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
+.band dd{color:#b8bcc1}
+/* supplements */
+.sups{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.sup{background:var(--paper);border:2px solid var(--ink);border-radius:4px;display:flex;flex-direction:column;overflow:hidden}
+.sup .pic{height:150px;background:repeating-linear-gradient(135deg,#d6d6d0 0 12px,#e4e4df 12px 24px);display:flex;align-items:center;justify-content:center;font-family:"Big Shoulders Display",Impact,sans-serif;font-size:44px;font-weight:900;color:var(--steel)}
+.sup .pic img{width:100%;height:100%;object-fit:cover}
+.sup .body{padding:18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.sup h3{font-size:28px;font-weight:900}
+.sup p{font-size:15px;color:#3d4247;flex:1}
+.sup .btn{padding:10px 14px;font-size:15px}
+.note{margin-top:22px;font-size:14px;color:var(--steel);max-width:620px}
+/* plans */
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.plan{background:var(--paper);border:2px solid var(--ink);border-radius:4px;padding:28px 24px;display:flex;flex-direction:column;gap:12px}
+.plan.best{background:var(--plate)}
+.plan h3{font-size:36px;font-weight:900}
+.plan p{flex:1;font-size:16px;color:#2b2f33}
+/* CTA */
+.final{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.final h2{color:var(--plate)}
+form{display:grid;gap:14px;background:var(--paper);color:var(--ink);padding:26px;border-radius:4px}
+label{font-weight:600;font-size:15px;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:11px 12px;border:2px solid var(--ink);border-radius:4px;background:#fff;color:var(--ink);width:100%}
+textarea{resize:vertical;min-height:84px}
+.hint{font-size:13px;color:var(--steel)}
+.err{color:#b3261e;font-size:14px;min-height:20px}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.visit dl{display:grid;gap:18px}.visit dt{font-weight:600}.visit dd{color:#3d4247}
+footer{background:#0e0f10;color:#b8bcc1;padding:30px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.wa{position:fixed;right:16px;bottom:16px;z-index:20;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(10,10,10,.92);display:none;align-items:center;justify-content:center;padding:20px}
+.lb.on{display:flex}
+.lb .box{max-width:min(960px,100%);max-height:100%;color:var(--paper);text-align:center}
+.lb img,.lb video{max-width:100%;max-height:78vh;border-radius:4px}
+.lb p{margin-top:10px}
+.lb button{position:absolute;top:14px;right:18px;background:var(--plate);border:0;border-radius:4px;font-weight:600;padding:8px 16px}
+@media(max-width:820px){.gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}.final,.visit{grid-template-columns:1fr}nav a.l{display:none}section{padding:60px 0}.bar .l{left:2%}.bar .r{right:2%}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="#top">The Biceps <span>Gym</span></a>
+  <nav>
+    <a class="l" href="#programs">Programs</a><a class="l" href="#gallery">Gallery</a><a class="l" href="#supplements">Supplements</a><a class="l" href="#plans">Membership</a>
+    <a class="btn" href="#join">Join now</a>
+  </nav>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <div class="rating"><b>4.8★</b><span>rated by lifters in Ayodhya</span></div>
+  <h1>Train<em>with purpose</em></h1>
+  <p>Strength training, bodybuilding and personal coaching on a spacious floor in Gudri Bazar. Come in, lift, and leave stronger.</p>
+  <div class="cta"><a class="btn js-wa" href="#">Book a free visit</a><a class="btn dark js-call" href="#">Call the gym</a></div>
+  <div class="bar" aria-hidden="true"><div class="rod"></div><div class="stack l"><i></i><i></i><i></i></div><div class="stack r"><i></i><i></i><i></i></div></div>
+</div></section>
+
+<section id="programs" style="padding-top:30px"><div class="wrap">
+  <h2>What you can train</h2><p class="lead">Pick a goal. Our trainers help you build a plan around it.</p>
+  <div class="progs">
+    <article class="prog"><h3>Strength training</h3><p>Build raw strength with free weights and structured progression.</p></article>
+    <article class="prog"><h3>Bodybuilding</h3><p>Add muscle size and shape with split routines made for your body.</p></article>
+    <article class="prog"><h3>Personal training</h3><p>One-to-one coaching on form, plan and consistency.</p></article>
+    <article class="prog"><h3>Open workout floor</h3><p>Room to move, so you can lift without waiting or crowding.</p></article>
+  </div>
+</div></section>
+
+<section id="gallery" class="band"><div class="wrap">
+  <h2>Inside the gym</h2><p class="lead">Photos and videos from the floor. Tap any one to open it.</p>
+  <div class="gal" id="galGrid"></div>
+  <div class="reels">
+    <div class="reels-head"><h3>Reels</h3><div class="cbtns"><button type="button" class="cbtn" id="rPrev" aria-label="Previous reels">&#8249;</button><button type="button" class="cbtn" id="rNext" aria-label="Next reels">&#8250;</button></div></div>
+    <div class="track" id="reelTrack" tabindex="0" aria-label="Gym reels"></div>
+  </div>
+</div></section>
+
+<section id="supplements"><div class="wrap">
+  <h2>Supplements</h2><p class="lead">Stocked at the gym. Message us to check today’s price and availability.</p>
+  <div class="sups" id="supGrid"></div>
+  <p class="note">Supplements support training and diet, they don’t replace them. If you have a health condition or take medicine, check with a doctor first.</p>
+</div></section>
+
+<section id="plans" class="band"><div class="wrap">
+  <h2>Membership</h2><p class="lead">Message us for today’s fees. Longer plans cost less per month.</p>
+  <div class="plans">
+    <div class="plan"><h3>Monthly</h3><p>Start with a month and see how the gym feels.</p><a class="btn dark js-wa" data-msg="Hi, I’d like to know the Monthly membership price at The Biceps Gym." href="#">Ask the price</a></div>
+    <div class="plan best"><h3>Quarterly</h3><p>Three months is where results start to show.</p><a class="btn dark js-wa" data-msg="Hi, I’d like to know the Quarterly membership price at The Biceps Gym." href="#">Ask the price</a></div>
+    <div class="plan"><h3>Yearly</h3><p>Best value for lifters who plan to stay consistent.</p><a class="btn dark js-wa" data-msg="Hi, I’d like to know the Yearly membership price at The Biceps Gym." href="#">Ask the price</a></div>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <h2>Questions</h2><p class="lead">Quick answers before you walk in.</p>
+  <div class="faq" id="faqList"></div>
+</div></section>
+
+<section id="join" style="padding-top:0"><div class="wrap final">
+  <div>
+    <h2 style="color:var(--ink)">Start this week</h2>
+    <p class="lead">Tell us your goal and we’ll reply on WhatsApp with timings, fees and a free trial visit.</p>
+    <div class="cta"><a class="btn js-wa" href="#">WhatsApp us</a><a class="btn dark js-call" href="#">Call now</a></div>
+  </div>
+  <form id="enq" novalidate>
+    <label>Your name<input id="fName" autocomplete="name" placeholder="e.g. Rahul"></label>
+    <label>Your goal<select id="fGoal"><option>Build muscle</option><option>Lose fat</option><option>Get stronger</option><option>Personal training</option><option>Supplements</option></select></label>
+    <label>Message (optional)<textarea id="fMsg" placeholder="Preferred time, questions…"></textarea></label>
+    <div class="err" id="fErr" role="alert"></div>
+    <button class="btn dark" type="submit">Send on WhatsApp</button>
+    <span class="hint">This opens WhatsApp with your message ready to send.</span>
+  </form>
+</div></section>
+
+<section id="visit" class="band"><div class="wrap visit">
+  <div>
+    <h2>Visit us</h2>
+    <p class="lead" style="margin-bottom:24px">Walk in for a look around, or message first and we’ll be ready.</p>
+    <dl><div><dt>Address</dt><dd id="addr"></dd></div><div><dt>Hours</dt><dd id="hours"></dd></div><div><dt>Phone and WhatsApp</dt><dd id="phone"></dd></div></dl>
+    <a class="btn" id="map" target="_blank" rel="noopener" href="#" style="margin-top:26px">Get directions</a>
+  </div>
+  <div class="mapbox"><iframe id="mapFrame" title="Map showing The Biceps Gym in Gudri Bazar, Ayodhya" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© <span id="yr"></span> The Biceps Gym, Ayodhya</span><span>Strength and fitness centre</span></div></footer>
+<a class="btn wa js-wa" href="#">WhatsApp us</a>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Gallery viewer"><button id="lbX" type="button">Close</button><div class="box" id="lbBox"></div></div>
+
+<script>
+/* ============ EDIT FOR THE CLIENT ============ */
+var CONFIG = {
+  phone: "919999999999",   // country code + number, no + or spaces
+  address: "Gudri Bazar, Ayodhya, Uttar Pradesh",
+  hours: "Call or message for today’s timings",
+  mapQuery: "The Biceps Gym Gudri Bazar Ayodhya",
+  /* Gallery: put files in a "media" folder next to index.html, then set src.
+     type is "image" or "video". Leave src empty to show a placeholder. size: "big", "wide" or "". */
+  gallery: [
+    {type:"image", src:"", caption:"Main workout floor", size:"big"},
+    {type:"video", src:"", caption:"Heavy deadlift set", size:""},
+    {type:"image", src:"", caption:"Free weights area", size:""},
+    {type:"image", src:"", caption:"Trainer with a member", size:"wide"},
+    {type:"video", src:"", caption:"Member transformation", size:""},
+    {type:"image", src:"", caption:"Cable and machine zone", size:""},
+    {type:"image", src:"", caption:"Supplement counter", size:"wide"}
+  ],
+  /* Reels (vertical 9:16 videos): put MP4 files in "media", set src. ig = optional Instagram reel link. */
+  reels: [
+    {title:"A day of training at the gym", note:"Watch how a full session looks on our floor.", src:"", ig:""},
+    {title:"Member transformation story", note:"Real progress from one of our lifters.", src:"", ig:""},
+    {title:"Trainer tips: perfect your form", note:"Short coaching tips from our trainers.", src:"", ig:""},
+    {title:"New supplements in stock", note:"What just arrived at the counter.", src:"", ig:""}
+  ],
+  /* FAQ accordion: edit freely */
+  faq: [
+    {q:"How do I join?", a:"Walk in to the gym or message us on WhatsApp. We’ll explain the plans and help you start."},
+    {q:"What are the membership fees?", a:"Fees depend on the plan (monthly, quarterly or yearly). Message us and we’ll send today’s prices."},
+    {q:"Can I visit before I join?", a:"Yes. Walk in for a look around, or message us first so someone can show you the gym."},
+    {q:"Do you have personal trainers?", a:"Yes, we offer personal training. Tell us your goal and we’ll match you with a plan."},
+    {q:"Do you sell supplements?", a:"Yes. See the Supplements section and message us to check what’s in stock and the price."},
+    {q:"What are your timings?", a:"Call or message us for today’s timings, since they can change on holidays."}
+  ],
+  /* Supplements: name, blurb, optional img. Add price only if the client wants it shown. */
+  supplements: [
+    {name:"Whey protein", blurb:"Fast protein to help recovery after training.", img:""},
+    {name:"Creatine", blurb:"A well-studied supplement for strength and power.", img:""},
+    {name:"Pre-workout", blurb:"Energy and focus for harder sessions.", img:""},
+    {name:"BCAAs", blurb:"Amino acids to sip during long workouts.", img:""},
+    {name:"Mass gainer", blurb:"Extra calories for lifters who struggle to gain.", img:""},
+    {name:"Multivitamin", blurb:"Daily cover for everyday nutrition gaps.", img:""}
+  ]
+};
+/* ============================================= */
+var $ = function(id){return document.getElementById(id)};
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function wa(t){return "https://wa.me/"+CONFIG.phone+"?text="+encodeURIComponent(t)}
+
+/* links */
+document.querySelectorAll(".js-wa").forEach(function(a){
+  a.href = wa(a.getAttribute("data-msg") || "Hi, I’d like to visit The Biceps Gym. Can you share the details?");
+  a.target="_blank"; a.rel="noopener";
+});
+document.querySelectorAll(".js-call").forEach(function(a){a.href="tel:+"+CONFIG.phone});
+$("map").href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(CONFIG.mapQuery);
+$("addr").textContent=CONFIG.address; $("hours").textContent=CONFIG.hours;
+$("phone").textContent="+"+CONFIG.phone; $("yr").textContent=new Date().getFullYear();
+
+/* gallery */
+$("galGrid").innerHTML = CONFIG.gallery.map(function(g,i){
+  var cls="tile"+(g.size?" "+g.size:"")+(g.src?"":" ph");
+  var media = g.src ? (g.type==="video" ? '<video src="'+esc(g.src)+'" muted playsinline preload="metadata"></video>' : '<img src="'+esc(g.src)+'" alt="'+esc(g.caption)+'" loading="lazy">') : "";
+  var badge = g.type==="video" ? '<span class="play">Video</span>' : "";
+  var cap = g.src ? esc(g.caption) : esc(g.caption)+" (add "+(g.type==="video"?"video":"photo")+")";
+  return '<button type="button" class="'+cls+'" data-i="'+i+'" aria-label="Open: '+esc(g.caption)+'">'+media+badge+'<span class="cap">'+cap+'</span></button>';
+}).join("");
+$("galGrid").addEventListener("click",function(e){
+  var b=e.target.closest(".tile"); if(!b) return;
+  var g=CONFIG.gallery[+b.getAttribute("data-i")];
+  if(!g.src){ return; }
+  $("lbBox").innerHTML=(g.type==="video"?'<video src="'+esc(g.src)+'" controls autoplay playsinline></video>':'<img src="'+esc(g.src)+'" alt="'+esc(g.caption)+'">')+'<p>'+esc(g.caption)+'</p>';
+  $("lb").classList.add("on"); $("lbX").focus();
+});
+function closeLb(){var v=$("lbBox").querySelector("video"); if(v) v.pause(); $("lb").classList.remove("on"); $("lbBox").innerHTML=""}
+$("lbX").onclick=closeLb;
+$("lb").addEventListener("click",function(e){if(e.target===this) closeLb()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape") closeLb()});
+
+/* reels carousel */
+$("reelTrack").innerHTML = CONFIG.reels.map(function(r){
+  var media = r.src ? '<div class="reel has"><video src="'+esc(r.src)+'" controls playsinline preload="metadata"></video></div>' : '<div class="reel">Add reel video here (vertical 9:16)</div>';
+  var ig = r.ig ? '<a target="_blank" rel="noopener" href="'+esc(r.ig)+'">Watch on Instagram</a>' : '';
+  return '<article class="rcard">'+media+'<h4>'+esc(r.title)+'</h4><p>'+esc(r.note||"")+'</p>'+ig+'</article>';
+}).join("");
+function slide(dir){var t=$("reelTrack"),c=t.querySelector(".rcard");t.scrollBy({left:dir*(c?c.offsetWidth+16:240),behavior:"smooth"})}
+$("rPrev").onclick=function(){slide(-1)}; $("rNext").onclick=function(){slide(1)};
+$("reelTrack").addEventListener("play",function(e){ /* only one reel plays at a time */
+  document.querySelectorAll("#reelTrack video").forEach(function(v){if(v!==e.target) v.pause()});
+},true);
+
+/* accordion (FAQ): one open at a time */
+$("faqList").innerHTML = CONFIG.faq.map(function(f,i){
+  return '<div class="acc'+(i===0?' open':'')+'"><button type="button" class="acc-h" id="fh'+i+'" aria-expanded="'+(i===0)+'" aria-controls="fp'+i+'"><span>'+esc(f.q)+'</span><span class="ico" aria-hidden="true">+</span></button><div class="acc-p" id="fp'+i+'" role="region" aria-labelledby="fh'+i+'"><p>'+esc(f.a)+'</p></div></div>';
+}).join("");
+$("faqList").addEventListener("click",function(e){
+  var h=e.target.closest(".acc-h"); if(!h) return;
+  var item=h.parentNode, willOpen=!item.classList.contains("open");
+  document.querySelectorAll("#faqList .acc").forEach(function(a){a.classList.remove("open");a.querySelector(".acc-h").setAttribute("aria-expanded","false")});
+  if(willOpen){item.classList.add("open");h.setAttribute("aria-expanded","true")}
+});
+
+/* map */
+$("mapFrame").src="https://www.google.com/maps?q="+encodeURIComponent(CONFIG.mapQuery)+"&output=embed";
+
+/* supplements */
+$("supGrid").innerHTML = CONFIG.supplements.map(function(s){
+  var pic = s.img ? '<img src="'+esc(s.img)+'" alt="'+esc(s.name)+'" loading="lazy">' : esc(s.name.charAt(0));
+  var link = wa("Hi, I’m interested in "+s.name+" at The Biceps Gym. Is it in stock and what’s the price?");
+  return '<article class="sup"><div class="pic">'+pic+'</div><div class="body"><h3>'+esc(s.name)+'</h3><p>'+esc(s.blurb)+'</p><a class="btn dark" target="_blank" rel="noopener" href="'+link+'">Ask on WhatsApp</a></div></article>';
+}).join("");
+
+/* enquiry form -> WhatsApp */
+$("enq").addEventListener("submit",function(e){
+  e.preventDefault();
+  var name=$("fName").value.trim();
+  if(!name){ $("fErr").textContent="Enter your name so we know who to reply to."; $("fName").focus(); return; }
+  $("fErr").textContent="";
+  var msg="Hi, I’m "+name+". My goal: "+$("fGoal").value+"."+($("fMsg").value.trim()?" "+$("fMsg").value.trim():"")+" Please share timings and fees.";
+  window.open(wa(msg),"_blank","noopener");
+});
+</script>
+</body>
+</html>
